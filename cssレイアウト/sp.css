@@ -1,0 +1,71 @@
+@charset "UTF-8";
+@media screen and (max-width:480px) { 
+    /*　画面サイズが480px以下からはここを読み込む(ブレークポイント)　*/
+
+body {
+  line-height: 2;
+  color: #333;
+  font-size: 77%;
+}
+
+p{
+	text-align: justify; /*両端揃え (折り返し位置調整)*/
+}
+	
+
+
+#container {
+  width: 94%;
+}
+
+header {
+  height: 120px;
+}
+
+header h1,header p{
+	position: static;
+	text-align: center;
+	transform: translateY(30px); /*縦軸に30px移動する (h1,pの大きさ自体は変わらない)*/
+}
+	/*PC表示、SP表示で分岐*/
+	.pc{
+		display: none;
+	}
+	
+	.sp{
+		display: block;
+	}
+	
+.drawer-nav{
+    background: #09C;
+}
+
+nav ul li a {
+  width: 151px;
+  border: none;
+}
+nav ul li:last-child a {
+  width: 151px;
+}
+
+#mainbox{
+	width: 94%;
+	float: none; /*float解除*/
+	margin: 10px 0 30px;
+} 
+
+#mainbox ul {
+    margin-left: 1.5em;
+}
+
+#subbox {
+	width: 94%;
+	margin-right: 0;
+	float: none; /*float解除*/
+}
+
+
+}
+
+
+

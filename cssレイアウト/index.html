@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta name="robots" content="noindex">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<title>CSSレイアウト</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+<script src="iscroll.js"></script> 
+<script src="drawer.min.js"></script>
+	<link rel="stylesheet" href="drawer.min.css" type="text/css">
+<link href="style.css" rel="stylesheet" type="text/css">
+<link href="sp.css" rel="stylesheet" type="text/css">
+</head>
+
+<body class="drawer drawer--right">
+<div id="container">
+  <header role="banner">
+    <h1><a href="./">CSSレイアウト</a></h1>
+    <p>正しくコーディングしよう</p>
+	  <div class="pc">
+    <nav>
+      <ul id="menu" class="clearfix">
+        <li><a href="menu1" target="_brank">menu1</a></li>
+        <li><a href="menu2">menu2</a></li>
+        <li><a href="menu3">menu3</a></li>
+        <li><a href="menu4">menu4</a></li>
+        <li><a href="menu5">menu5</a></li>
+      </ul>
+    </nav>
+	  </div><!--pc表示で分岐-->
+	  
+    <button type="button" class="drawer-toggle drawer-hamburger"> <span class="sr-only">toggle navigation</span> <span class="drawer-hamburger-icon"></span> </button>
+	  <div class="sp">
+    <nav class="drawer-nav" role="navigation">
+      <ul class="clearfix drawer-menu">
+        <li><a class="drawer-menu-item" href="menu1" target="_brank">menu1</a></li>
+        <li><a class="drawer-menu-item" href="menu2">menu2</a></li>
+        <li><a class="drawer-menu-item" href="menu3">menu3</a></li>
+        <li><a class="drawer-menu-item" href="menu4">menu4</a></li>
+        <li><a class="drawer-menu-item" href="menu5">menu5</a></li>
+      </ul>
+    </nav>
+	  </div><!--sp表示で分岐-->
+  </header>
+  <main role="main">
+    <div id="content" class="clearfix">
+      <div id="subbox">
+        <h2>この課題について</h2>
+        <p>正しく確実なコーディングをおこなえるかを確認します。</p>
+        <h2>作業時間</h2>
+        <p>本日は６時間で予定していますが、職業レベルでは１時間がリミットです。</p>
+      </div>
+      <!--End subbox-->
+      <div id="mainbox">
+        <h2>課題内容</h2>
+        <p>下記の条件でウェブページを作成する</p>
+        <ul>
+          <li>ページの幅が左右のボーダーを含めて760pxとする</li>
+          <li>ナビゲーションを1pxのボーダーで区切る</li>
+          <li>左側のカラムの幅を200pxとし、枠内の余白を上下左右10pxとする</li>
+          <li>左右のカラムの間には10pxの余白をつけ、右のカラムにも枠内の余白を上下左右10pxとする</li>
+          <li>右側のカラムの文字サイズ、色、書体等は自由とする</li>
+        </ul>
+      </div>
+      <!--End mainbox--> 
+    </div>
+    <!--End content--> 
+  </main>
+  <!-- #BeginLibraryItem "/Library/footer.lbi" -->
+  <footer>
+    <p><small>copyright &copy; ○○○○○ All Rights Reserved.</small></p>
+  </footer>
+  <!-- #EndLibraryItem --></div>
+<!--End container--> 
+<script>
+	$(document).ready(function() {
+  $('.drawer').drawer();
+});
+	</script>
+</body>
+</html>
